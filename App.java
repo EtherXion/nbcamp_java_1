@@ -1,5 +1,6 @@
 package calculator;
 
+import java.util.Queue;
 import java.util.Scanner;
 
 public class App {
@@ -23,13 +24,16 @@ public class App {
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             if (sc.next().equals("remove")) {
-                calculator.queue.remove();
+                Queue<Integer> queue = calculator.getQueue();
+                queue.remove();
+                calculator.setQueue(queue);
             }
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             if (sc.next().equals("inquiry")) {
+                Queue<Integer> queue = calculator.getQueue();
                 // forEach 사용
-                for (Integer que : calculator.queue) {
+                for (Integer que : queue) {
                     System.out.println(que);
                 }
             }
