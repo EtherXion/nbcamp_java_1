@@ -8,12 +8,10 @@ public class App {
 
     public static void main(String[] args) {
 
-        int array[] = new int[10];
         Queue<Integer> queue = new LinkedList<>();
 
         Scanner sc = new Scanner(System.in);
 
-        int count = 0;
         int result = 0;
 
         do {
@@ -27,31 +25,19 @@ public class App {
 
             if (A.equals("+")) {
                 result = FirstNumber + SecondNumber;
-                array[count] = result;
                 queue.add(result);
             } else if (A.equals("-")) {
                 result = FirstNumber - SecondNumber;
-                array[count] = result;
                 queue.add(result);
             } else if (A.equals("*")) {
                 result = FirstNumber * SecondNumber;
-                array[count] = result;
                 queue.add(result);
             } else if (A.equals("/")) {
                 result = FirstNumber / SecondNumber;
-                array[count] = result;
                 queue.add(result);
             }
 
             System.out.println("결과 : " + result);
-
-            if (count == 9) {
-                for (int j = 0; j < array.length - 1; j++) {
-                    array[j] = array[j + 1];
-                    count--;
-                }
-            }
-            count++;
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             if (sc.next().equals("remove")) {
@@ -69,8 +55,6 @@ public class App {
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료) : ");
         } while (!sc.next().equals("exit"));
-
-        System.out.println(count);
 
     }
 }
