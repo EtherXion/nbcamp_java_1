@@ -3,7 +3,7 @@ package calculator;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class CircleCalculator {
+public class CircleCalculator extends Calculator {
 
     private Queue<Double> queue2 = new LinkedList<>();
     public Queue<Double> getQueue2() {

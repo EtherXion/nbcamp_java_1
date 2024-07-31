@@ -5,12 +5,9 @@ import java.util.Queue;
 
 public class Calculator {
 
-    class ArithmeticCalculator extends Calculator{
-    }
-    class CircleCalculator extends Calculator{
-    }
-
-
+    ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
+    CircleCalculator circleCalculator = new CircleCalculator();
+    
 
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
     private Queue<Integer> queue = new LinkedList<>();

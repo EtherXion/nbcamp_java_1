@@ -3,7 +3,8 @@ package calculator;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ArithmeticCalculator {
+// 자식 extend 부모 상속
+public class ArithmeticCalculator extends Calculator {
 
     private Queue<Integer> queue = new LinkedList<>();
     public Queue<Integer> getQueue() {
